@@ -1,0 +1,28 @@
+start server using:
+$ node index.js
+
+for suppose you made some changes in application script.
+now you will have to close the server and restart the server using above command.
+
+but to save the hassle, you can install nodemon module globally,
+$ npm install nodemon -g
+
+you can start your server using:
+$ nodemon index.js
+
+this will automatically update the server with any changes in application script.
+
+however, an error would occur that nodemon is not recognized.
+so for this, you have to set the PATH under user variables,
+to the output of following command:
+$ npm config get prefix
+>> C:\Users\<username>\AppData\Roaming\npm
+
+after setting this another error might occur:
+nodemon : File C:\Users\<username>\AppData\Roaming\npm\nodemon.ps1 cannot be loaded because running scripts is disabled on this system.
+
+this would get resolved by running the following command on PowerShell:
+$ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+to revert this action, use the the following command:
+$ Set-ExecutionPolicy Restricted -Scope CurrentUser

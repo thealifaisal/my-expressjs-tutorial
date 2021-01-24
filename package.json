@@ -1,0 +1,18 @@
+{
+  "name": "movie-project",
+  "version": "1.0.0",
+  "description": "implements routes for crud requests",
+  "main": "index.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ali Faisal",
+  "license": "ISC",
+  "type": "module"
+}
