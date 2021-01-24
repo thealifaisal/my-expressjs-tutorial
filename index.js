@@ -59,3 +59,9 @@ app.get('/', function(req, res){
 app.listen(3000);
 
 console.log('server listening on port 3000');
+
+// for a better insight what above commands/keywords mean, you can visit:
+// https://www.javatpoint.com/expressjs-tutorial
+
+// for RESTful APIs:
+// https://www.tutorialspoint.com/expressjs/expressjs_restful_apis.htm
