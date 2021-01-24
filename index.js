@@ -48,10 +48,22 @@ import movies from './movies.js';
 // by movies variable 
 app.use('/movies', movies);
 
-// when client a sends a request using, localhost:3000/
+// when client a sends a GET request using, localhost:3000/
 // below handler will run
 app.get('/', function(req, res){
+    // req.query can be used inside this GET handler, req.body can't be used
     console.log('Welcome to index.js');
+    res.status(200).send('Welcome to index.js using GET request');
+});
+
+// note: req.query or req.body is a JSON object with key-value pairs
+// and can be accessed using: value = req.body['key']
+
+// when client a sends a POST request using, localhost:3000/
+// below handler will run
+app.post('/', function(req, res){
+    // req.body can be used inside this GET handler, req.query can't be used
+    console.log('Welcome to index.js using POST request');
     res.status(200).send('Welcome to index.js');
 });
 
