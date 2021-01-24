@@ -52,7 +52,7 @@ app.use('/movies', movies);
 // below handler will run
 app.get('/', function(req, res){
     // req.query can be used inside this GET handler, req.body can't be used
-    console.log('Welcome to index.js');
+    console.log('Welcome to index.js using GET request');
     res.status(200).send('Welcome to index.js using GET request');
 });
 
@@ -64,7 +64,7 @@ app.get('/', function(req, res){
 app.post('/', function(req, res){
     // req.body can be used inside this POST handler, req.query can't be used
     console.log('Welcome to index.js using POST request');
-    res.status(200).send('Welcome to index.js');
+    res.status(200).send('Welcome to index.js using POST request');
 });
 
 // the node app listens for client requests on port 3000
