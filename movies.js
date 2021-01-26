@@ -4,6 +4,8 @@ import { Router } from 'express';
 var router = Router();
 
 // ES6 format
+// exporting the router and
+// other files will be able to import this router
 export default router;
 
 // CommonJS format

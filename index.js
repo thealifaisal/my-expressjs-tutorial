@@ -39,14 +39,15 @@ app.use(cookieParser());
 app.use(urlencoded({extended: true}));
 app.use(json());
 
-// require router defined in movies.js
-import movies from './movies.js';
+// require router defined in and exported from movies.js
+// in other words, importing the router
+import movies_router from './movies.js';
 
 // use the router on the sub-route /movies
 // eg: when client a sends a request using, localhost:3000/movies,
 // the request will be re-routed to ./movies.js file which is referenced
 // by movies variable 
-app.use('/movies', movies);
+app.use('/movies', movies_router);
 
 // when client a sends a GET request using, localhost:3000/
 // below handler will run
